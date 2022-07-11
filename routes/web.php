@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\{
+    TransferController,
+    UserController
+};
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::resource('user', UserController::class);
+Route::resource('transfer', TransferController::class);
+
 
 Route::get('/', function () {
     return view('welcome');
