@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Card;
+use App\Models\Projects;
 use Illuminate\Http\Request;
 
-class CardController extends Controller
+class ProjectsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +24,7 @@ class CardController extends Controller
      */
     public function create()
     {
-        //
+        return view('projects.create');
     }
 
     /**
@@ -35,16 +35,17 @@ class CardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Projects::create($request->all());
+        return 'success';
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Card  $card
+     * @param  \App\Models\Projects  $projects
      * @return \Illuminate\Http\Response
      */
-    public function show(Card $card)
+    public function show(Projects $projects)
     {
         //
     }
@@ -52,10 +53,10 @@ class CardController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Card  $card
+     * @param  \App\Models\Projects  $projects
      * @return \Illuminate\Http\Response
      */
-    public function edit(Card $card)
+    public function edit(Projects $projects)
     {
         //
     }
@@ -64,10 +65,10 @@ class CardController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Card  $card
+     * @param  \App\Models\Projects  $projects
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Card $card)
+    public function update(Request $request, Projects $projects)
     {
         //
     }
@@ -75,10 +76,10 @@ class CardController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Card  $card
+     * @param  \App\Models\Projects  $projects
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Card $card)
+    public function destroy(Projects $projects)
     {
         //
     }

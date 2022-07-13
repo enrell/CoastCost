@@ -2,9 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
-    TransferController,
-    UserController
+    TransfersController,
+    UserController,
+    WalletsController,
+    CardsController,
+    ProjectsController,
+    FileController
 };
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +23,13 @@ use App\Http\Controllers\{
 */
 
 Route::resource('user', UserController::class);
-Route::resource('transfer', TransferController::class);
+Route::resource('transfers', TransfersController::class);
+Route::resource('wallets', WalletsController::class);
+Route::resource('cards', CardsController::class);
+Route::resource('projects', ProjectsController::class);
+
+Route::get('fileupload', [FileController::class, 'index']);
+Route::post('fileupload', [FileController::class, 'store'])->name('file.store');
 
 
 Route::get('/', function () {

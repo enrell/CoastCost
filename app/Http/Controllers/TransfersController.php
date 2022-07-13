@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Wallet;
+use App\Models\Transfers;
 use Illuminate\Http\Request;
 
-class WalletController extends Controller
+class TransfersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +24,7 @@ class WalletController extends Controller
      */
     public function create()
     {
-        //
+        return view('transfers.create');
     }
 
     /**
@@ -35,16 +35,17 @@ class WalletController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Transfers::create($request->all());
+        return 'success';
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Wallet  $wallet
+     * @param  \App\Models\Transfers  $transfers
      * @return \Illuminate\Http\Response
      */
-    public function show(Wallet $wallet)
+    public function show(Transfers $transfers)
     {
         //
     }
@@ -52,10 +53,10 @@ class WalletController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Wallet  $wallet
+     * @param  \App\Models\Transfers  $transfers
      * @return \Illuminate\Http\Response
      */
-    public function edit(Wallet $wallet)
+    public function edit(Transfers $transfers)
     {
         //
     }
@@ -64,10 +65,10 @@ class WalletController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Wallet  $wallet
+     * @param  \App\Models\Transfers  $transfers
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Wallet $wallet)
+    public function update(Request $request, Transfers $transfers)
     {
         //
     }
@@ -75,10 +76,10 @@ class WalletController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Wallet  $wallet
+     * @param  \App\Models\Transfers  $transfers
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Wallet $wallet)
+    public function destroy(Transfers $transfers)
     {
         //
     }

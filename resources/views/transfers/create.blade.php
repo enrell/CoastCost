@@ -10,15 +10,15 @@
   </div>
 </div>
 
-<form action="{{ route('transfer.store') }}" method="POST">
+<form action="{{ route('transfers.store') }}" method="POST">
   @csrf
   <div class="row">
     <div class="col">
       <select name="card" class="form-select" aria-label="Default select example">
-        <option selected>Master</option>
-        <option value="1">Nubank</option>
-        <option value="2">Visa</option>
-        <option value="3">Ame</option>
+        <option selected value="Master">Master</option>
+        <option value="Nubank">Nubank</option>
+        <option value="Visa">Visa</option>
+        <option value="Ame">Ame</option>
       </select>
       <div class="row g-2">
   <div class="col-md">
@@ -31,9 +31,9 @@
     <div class="form-floating">
       <select name="coin" class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
         <option selected>Real</option>
-        <option value="1">Dolar</option>
-        <option value="2">Euro</option>
-        <option value="3">Crypto</option>
+        <option value="Dolar">Dolar</option>
+        <option value="Euro">Euro</option>
+        <option value="Crypto">Crypto</option>
       </select>
       <label for="floatingSelectGrid">Moeda</label>
     </div>

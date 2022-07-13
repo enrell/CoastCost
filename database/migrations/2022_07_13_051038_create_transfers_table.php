@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('transfer', function (Blueprint $table) {
+        Schema::create('transfers', function (Blueprint $table) {
             $table->id();
             $table->string('card', 42);
             $table->double('amount', 8, 2);
-            $table->boolean('coin');
+            $table->string('coin');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transfer');
+        Schema::dropIfExists('transfers');
     }
 };
