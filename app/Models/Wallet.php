@@ -5,10 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Transfer extends Model
+class Wallet extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'card', 'amount', 'coin'
-    ];
 }

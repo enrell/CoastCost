@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Transfer;
+use App\Models\Card;
 use Illuminate\Http\Request;
 
-class TransferController extends Controller
+class CardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +24,7 @@ class TransferController extends Controller
      */
     public function create()
     {
-        return view('transfer.create');
+        //
     }
 
     /**
@@ -35,17 +35,16 @@ class TransferController extends Controller
      */
     public function store(Request $request)
     {
-        Transfer::create($request->all());
-        return redirect('transfer/create'); //->with('success', 'Sucesso na transferencia');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Transfer  $transfer
+     * @param  \App\Models\Card  $card
      * @return \Illuminate\Http\Response
      */
-    public function show(Transfer $transfer)
+    public function show(Card $card)
     {
         //
     }
@@ -53,10 +52,10 @@ class TransferController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Transfer  $transfer
+     * @param  \App\Models\Card  $card
      * @return \Illuminate\Http\Response
      */
-    public function edit(Transfer $transfer)
+    public function edit(Card $card)
     {
         //
     }
@@ -65,10 +64,10 @@ class TransferController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Transfer  $transfer
+     * @param  \App\Models\Card  $card
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Transfer $transfer)
+    public function update(Request $request, Card $card)
     {
         //
     }
@@ -76,10 +75,10 @@ class TransferController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Transfer  $transfer
+     * @param  \App\Models\Card  $card
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Transfer $transfer)
+    public function destroy(Card $card)
     {
         //
     }
